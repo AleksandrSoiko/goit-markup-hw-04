@@ -8,6 +8,7 @@
   --blue-txt-color: #2196f3;
   --black-txt-color: #000000;
   --grey-txt-color: #d9d9d9;
+  --social-color: #afb1b8;
 
   /* background color */
   --light-bcg-color: #f5f4fa;
@@ -58,6 +59,7 @@ h6,
 p,
 ul {
   margin: 0;
+  list-style-type: none;
 }
 
 ul {
@@ -82,14 +84,11 @@ ul {
   color: var(--blue-txt-color);
 }
 
-.list {
-  list-style-type: none;
-}
-
 /* navigation setup */
 .link.link-current {
   color: var(--blue-txt-color);
 }
+
 /* ========= */
 
 .btn {
@@ -160,6 +159,10 @@ ul {
 }
 
 .link.link-contact {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
   color: var(--light-txt-color);
 }
 
@@ -171,12 +174,24 @@ ul {
   color: var(--blue-txt-color);
 }
 
-/* ===hero section=== */
-.section-hero {
-  background-color: var(--dark-bcg-color);
+.icon-header {
+  fill: currentColor;
 }
 
+/* ===hero section=== */
+
 .section-hero {
+  background-color: var(--dark-bcg-color);
+  background-image: linear-gradient(
+      to top,
+      rgba(47, 48, 58, 0.4) 0%,
+      rgba(47, 48, 58, 0.4) 100%
+    ),
+    url(../images/hero.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 1600px auto;
+
   padding-top: 200px;
   padding-bottom: 200px;
 }
@@ -236,6 +251,17 @@ ul {
 .list-adv {
   display: flex;
   gap: 30px;
+}
+
+.icon-place {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 270px;
+  padding: 25px 100px;
+  background-color: var(--light-bcg-color);
+  border-radius: 4px;
+  margin-bottom: 30px;
 }
 
 .advantage {
@@ -317,11 +343,41 @@ ul {
 }
 
 .team-position {
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 
   color: var(--light-txt-color);
   line-height: calc(19 / 16);
   letter-spacing: 0.03em;
+}
+
+/* -----social link style ----- */
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  padding-bottom: 30px;
+}
+
+.socials-link {
+  display: inline-flex;
+  border-radius: 50%;
+  padding: 12px 12px;
+}
+
+.social-icon {
+  fill: var(--social-color);
+}
+
+.socials-link:hover,
+.socials-link:focus {
+background-color: var(--blue-txt-color);
+}
+
+
+.socials-link:hover .social-icon,
+.socials-link:focus .social-icon {
+  fill: var(--white-color);
 }
 
 /* ======== footer style ========== */
