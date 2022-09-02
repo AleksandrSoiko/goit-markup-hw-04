@@ -379,7 +379,46 @@ ul {
   fill: var(--white-color);
 }
 
+/* ============ client block style ======== */
+
+.client-title {
+  margin-bottom: 50px;
+
+  font-size: 36px;
+  line-height: calc(42 / 36);
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+
+.client-list {
+  display: flex;
+  gap: 30px;
+}
+
+.client-link {
+  display: block;
+  width: 170px;
+  padding: 16px 32px;
+  border: 1px solid var(--social-color);
+  border-radius: 4px;
+  color: var(--social-color);
+}
+
+.client-icon {
+  fill: currentColor;
+}
+
+.client-link:hover,
+.client-link:focus {
+  border-color: var(--blue-txt-color);
+  fill: var(--blue-txt-color);
+}
+
 /* ======== footer style ========== */
+.footer-container {
+  display: flex;
+  gap: 70px;
+}
 
 .footer {
   padding-top: 60px;
@@ -432,6 +471,47 @@ ul {
 .list-address > .list-item:not(:last-child) {
   margin-bottom: 9px;
 }
+
+/* footer social */
+
+.social-block {
+  padding-top: 12px;
+  padding-left: 70px;
+}
+
+.footer-title {
+  margin-bottom: 20px;
+
+  color: var(--white-color);
+  text-transform: uppercase;
+  font-size: 14px;
+  letter-spacing: 0.03em;
+}
+
+.social-block .social-list {
+  display: flex;
+  gap: 10px;
+  justify-content: start;
+}
+
+.socials-link-footer {
+  display: inline-flex;
+  padding: 12px 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--white-color);
+}
+
+.socials-link-footer .social-icon {
+  fill: var(--white-color);
+}
+
+.socials-link-footer:hover,
+.socials-link-footer:focus {
+  background-color: var(--blue-txt-color);
+}
+
+
 
 /* =========================================== */
 /* =============== portfolio ================= */
@@ -503,5 +583,5 @@ ul {
 .link-portfolio:focus {
   color: var(--blue-txt-color);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-  1px 4px 6px rgba(0, 0, 0, 0.16);
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
